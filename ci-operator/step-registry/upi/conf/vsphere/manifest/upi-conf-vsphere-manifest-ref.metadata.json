@@ -1,0 +1,12 @@
+{
+	"path": "upi/conf/vsphere/manifest/upi-conf-vsphere-manifest-ref.yaml",
+	"owners": {
+		"approvers": [
+			"staebler",
+			"jcpowermac",
+			"patrickdillon",
+			"jstuever",
+			"rvanderp3"
+		]
+	}
+}

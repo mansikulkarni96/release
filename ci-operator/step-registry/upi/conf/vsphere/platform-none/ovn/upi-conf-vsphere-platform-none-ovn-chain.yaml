@@ -1,13 +1,17 @@
 chain:
-  as: upi-conf-vsphere
+  as: upi-conf-vsphere-platform-none-ovn
   steps:
   - ref: ipi-conf
   - ref: ipi-conf-vsphere-check
+  - ref: ovn-conf
+  - ref: ovn-conf-hybrid-manifest-with-custom-vxlan-port
   - ref: upi-conf-vsphere
+  - ref: upi-conf-vsphere-platform-none
   - ref: upi-conf-vsphere-manifest
   - ref: upi-conf-vsphere-ova
   documentation: >-
-    This chain generates the files necessary to deploy a vSphere UPI cluster.
+    This chain generates the files necessary to deploy a vSphere UPI platform none cluster
+    with network type OVNKubernetes.
     It creates an install-config.yaml using the ipi-conf-vsphere chain.
     Then it uses that file to create the Ignition, metadata.json, and kubeconfig files.
     These files are copied to the shared dir for future consumption.
